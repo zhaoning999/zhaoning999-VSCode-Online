@@ -19,4 +19,4 @@ RUN \
   yarn && \
   yarn watch
   
-CMD["yarn", "web", "--port", "80"]
+CMD ["yarn", "web", "--port", "80"]
