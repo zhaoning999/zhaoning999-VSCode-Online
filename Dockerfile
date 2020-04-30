@@ -23,7 +23,6 @@ RUN \
   apt update && apt install yarn && \
   git clone https://github.com/microsoft/vscode.git && \
   cd vscode && \
-  yarn && \
-  timeout 1000 yarn watch
+  yarn
   
 CMD ["yarn", "web", "--port", "80"]
