@@ -22,7 +22,4 @@ RUN \
   apt update && apt install yarn && \
   git clone https://github.com/microsoft/vscode.git && \
   cd vscode && \
-  yarn && \
-  yarn watch & pid=$! ;sleep 500;kill -9 $pid 
-  
-CMD ["yarn", "web", "--port", "80"]
+  yarn
