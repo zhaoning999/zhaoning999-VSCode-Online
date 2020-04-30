@@ -16,6 +16,7 @@ RUN \
   npm install npm -g && \
   npm install -g n && \
   n 12.13.1 && \
+  PATH="$PATH" && \
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
   echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
   apt update && sudo apt install yarn && \
