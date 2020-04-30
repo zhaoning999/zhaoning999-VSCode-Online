@@ -4,7 +4,6 @@ RUN \
   apt-get update -qq && \
   apt-get install -y \
                     libx11-dev \
-                    timeout \
                     libxkbfile-dev \
                     libsecret-1-dev \
                     fakeroot \
@@ -23,6 +22,7 @@ RUN \
   apt update && apt install yarn && \
   git clone https://github.com/microsoft/vscode.git && \
   cd vscode && \
-  yarn
+  yarn && \
+  yarn watch & pid=$! ;sleep 500;kill -9 $pid 
   
 CMD ["yarn", "web", "--port", "80"]
