@@ -12,8 +12,13 @@ RUN \
                     curl \
                     python \
                     nodejs \
-                    npm \
-                    yarn && \
+                    npm && \
+  npm install npm -g && \
+  npm install -g n && \
+  n 12.13.1 && \
+  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - && \
+  echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list && \
+  apt update && sudo apt install yarn && \
   git clone https://github.com/microsoft/vscode.git && \
   cd vscode && \
   yarn && \
