@@ -22,4 +22,5 @@ RUN \
   apt update && apt install yarn && \
   git clone https://github.com/microsoft/vscode.git && \
   cd vscode && \
-  yarn
+  yarn && \
+  yarn kill-watchd
