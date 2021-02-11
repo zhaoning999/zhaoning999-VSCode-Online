@@ -25,4 +25,4 @@ WORKDIR vscode
 RUN \
   git checkout master && \
   yarn
-CMD ["yarn", "web"]
+CMD ["yarn", "web", "--port", "8080"]
